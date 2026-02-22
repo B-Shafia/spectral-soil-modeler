@@ -2,26 +2,40 @@
 An Automated ML Workflow for Soil Science
 # Spectral Soil Modeler
 
-The Problem: The "Manual Bottleneck"
+Overview:
 
-Currently, LSI researchers manually test combinations of:
+The Spectral Soil Modeler is a machine learning pipeline designed to predict soil properties using spectral reflectance data.
 
-3 Preprocessing Techniques: (e.g., Reflectance, Absorbance, Continuum Removal)
-5 ML Models: (PLSR, Cubist, Gradient Boosting, Kernel Ridge, SVR)
-This manual trial-and-error is slow and prone to errors. Your goal is to automate this.
+This project implements an end-to-end workflow including preprocessing, feature transformation, model training, evaluation, and automated performance comparison across multiple algorithms.
 
-Project Architecture
+Built as part of IIIT Hyderabad – MS in Data Science (Term 1).
 
-Component	Description
-Input	Spectral bands (Features) + Laboratory Ground-Truth (Targets).
-Engine	An automated pipeline that explores all combinations of preprocessing + ML algorithms.
-Validation	Rigorous testing using K-Fold Cross-Validation and held-out test sets.
-Diagnostics	Permutation Feature Importance to see which spectral bands matter most.
-Output	An interactive Streamlit dashboard featuring a leaderboard and performance plots.
-Technology Stack
+Problem Statement:
 
-Logic: Python, NumPy, Pandas
-ML & Math: Scikit-learn, Scipy
-Dashboard: Streamlit
-AI Pair-Programming: You are encouraged to use LLMs (Claude, ChatGPT, DeepSeek) to generate boilerplate, but you must ensure the final code is robust and well-tested.
-The Goal: Transform a manual research process into a reproducible, automated software product.
+Soil spectral data contains high-dimensional information that can be used to estimate important soil properties such as clay content, organic carbon, and other physical attributes.
+
+The objective of this project is to:
+
+--Process spectral datasets
+
+--Apply suitable transformations
+
+--Train multiple regression models
+
+--Evaluate performance using cross-validation
+
+--Generate comparative leaderboards
+
+Technologies Used:
+
+--Python
+
+--NumPy
+
+--Pandas
+
+--Scikit-learn
+
+--Matplotlib / Seaborn
+
+--Jupyter Notebook
